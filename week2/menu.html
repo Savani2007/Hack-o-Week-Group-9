@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sunshine Restaurant Menu</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fffde7;
+}
+
+.menu-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header {
+  text-align: center;
+  border-bottom: 3px solid #000;
+  padding-bottom: 15px;
+}
+
+.banner img {
+  width: 900px;
+  height: 300px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+h2 {
+  background: #000;
+  color: #fffde7;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.food-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.food-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  background: #fffef5;
+}
+
+.food-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.quantity {
+  margin-top: 6px;
+}
+
+.quantity select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .menu-wrapper {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu-wrapper">
+
+<header>
+  <h1>☀️ Sunshine Restaurant</h1>
+  <p>Delicious • Fresh • Affordable</p>
+  <div class="banner">
+    <img src="C:\Users\asus\Downloads\ChatGPT Image Jan 21, 2026, 08_32_27 PM.png">
+  </div>
+</header>
+
+<!-- Starters -->
+<h2>Starters</h2>
+<ul class="food-list">
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\Vegetable-Spring-Rolls-2-1.jpg">
+  <h3>Veg Spring Rolls</h3>
+  <span class="price">₹120</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\air-fryer-paneer-tikka-featured.jpg">
+  <h3>Paneer Tikka</h3>
+  <span class="price">₹180</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\chickentikkakebab.jpg">
+  <h3>Chicken Tikka</h3>
+  <span class="price">₹220</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\crispycorn.jpg">
+  <h3>Crispy Corn</h3>
+  <span class="price">₹140</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+</ul>
+
+<!-- Main Course -->
+<h2>Main Course</h2>
+<ul class="food-list">
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\paneer-butter-masala.jpg">
+  <h3>Paneer Butter Masala</h3>
+  <span class="price">₹220</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\Butter_Chicken-1024x1536.jpg">
+  <h3>Butter Chicken</h3>
+  <span class="price">₹260</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\Punjabi-Dal-Tadka-7.jpg">
+  <h3>Dal Tadka</h3>
+  <span class="price">₹160</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\Chicken-Curry-Thumbnail-1024x1024.jpg">
+  <h3>Chicken Curry</h3>
+  <span class="price">₹240</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+</ul>
+
+<!-- Desserts -->
+<h2>Desserts</h2>
+<ul class="food-list">
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\gulab-jamun-recipe_9fb159dc2674f395436a64666227c988-768x768.jpeg">
+  <h3>Gulab Jamun</h3>
+  <span class="price">₹70</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\Scoops-kinds-ice-cream.webp">
+  <h3>Ice Cream</h3>
+  <span class="price">₹80</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\fudgy-brownies-resize-15.jpg">
+  <h3>Brownie</h3>
+  <span class="price">₹120</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+</ul>
+
+<!-- Drinks -->
+<h2>Drinks</h2>
+<ul class="food-list">
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\OIP.jpeg">
+  <h3>Cold Drink</h3>
+  <span class="price">₹50</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\fresh-lime-soda-2-719x720.jpg">
+  <h3>Fresh Lime Soda</h3>
+  <span class="price">₹60</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+
+<li class="food-card">
+  <img src="C:\Users\asus\Downloads\hot coffee.jpeg">
+  <h3>Hot Coffee</h3>
+  <span class="price">₹40</span>
+  <div class="quantity">
+    <select>
+      <option value="1">Quantity: 1</option>
+      <option value="2">Quantity: 2</option>
+      <option value="3">Quantity: 3</option>
+      <option value="4">Quantity: 4</option>
+      <option value="5">Quantity: 5</option>
+      <option value="6">Quantity: 6</option>
+      <option value="7">Quantity: 7</option>
+      <option value="8">Quantity: 8</option>
+      <option value="9">Quantity: 9</option>
+      <option value="10">Quantity: 10</option>
+    </select>
+  </div>
+</li>
+</ul>
+
+<div style="text-align:center; margin-top:30px;">
+  <button style="padding:12px 20px; background:#000; color:#fffde7;">Order Now</button>
+  <button style="padding:12px 20px; background:#000; color:#fffde7;">Call to Order</button>
+</div>
+
+<!-- Contact Details Section -->
+<div style="margin-top:30px; background:#fffef5; border:1px solid #000; padding:15px; border-radius:8px;">
+  <h2 style="margin-top:0;">Contact Details</h2>
+  <p>📍 Sunshine Restaurant, Main Market Road</p>
+  <p>📞 Phone: 9XXXXXXXXX</p>
+  <p>📧 Email: sunshine@example.com</p>
+  <p>🕒 Open Daily: 10:00 AM – 11:00 PM</p>
+</div>
+
+</div>
+
+</body>
+</html>
