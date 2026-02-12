@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEasy</title>
+
+<style>
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f3f3f3;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+    background:#131921;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:600;
+    color:#ff9900;
+}
+
+.search{
+    width:45%;
+}
+
+.search input{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    outline:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    font-size:14px;
+}
+
+/* ---------- CATEGORY BAR ---------- */
+
+.categories{
+    background:white;
+    padding:12px 40px;
+    display:flex;
+    gap:25px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.08);
+}
+
+.categories span{
+    cursor:pointer;
+    font-size:14px;
+    color:#333;
+}
+
+.categories span:hover{
+    color:#ff9900;
+}
+
+/* ---------- PRODUCT SECTION ---------- */
+
+.container{
+    padding:40px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+/* ---------- PRODUCT CARD ---------- */
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    transition:0.3s;
+    position:relative;
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Discount badge */
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#e53935;
+    color:white;
+    font-size:12px;
+    padding:5px 8px;
+    border-radius:5px;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:contain;
+}
+
+/* Product title */
+.card h3{
+    font-size:16px;
+    margin:15px 0 5px;
+    color:#222;
+}
+
+/* Rating */
+.rating{
+    color:#ffa41c;
+    font-size:14px;
+}
+
+/* Price */
+.price{
+    margin:8px 0;
+}
+
+.new{
+    font-size:20px;
+    font-weight:600;
+    color:#B12704;
+}
+
+.old{
+    text-decoration:line-through;
+    color:gray;
+    margin-left:8px;
+    font-size:14px;
+}
+
+/* Button */
+.btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#ffd814;
+    font-weight:500;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.btn:hover{
+    background:#f7ca00;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+    .search{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">ShopEasy</div>
+
+    <div class="search">
+        <input type="text" placeholder="Search for products, brands and more">
+    </div>
+
+    <div class="nav-links">
+        <span>Account</span>
+        <span>Orders</span>
+        <span>Cart 🛒</span>
+    </div>
+</div>
+
+<!-- CATEGORY BAR -->
+<div class="categories">
+    <span>Electronics</span>
+    <span>Fashion</span>
+    <span>Mobiles</span>
+    <span>Home</span>
+    <span>Books</span>
+    <span>Appliances</span>
+</div>
+
+<!-- PRODUCTS -->
+<div class="container">
+<div class="products">
+
+    <div class="card">
+        <div class="badge">20% OFF</div>
+        <img src="C:\Users\asus\Downloads\headphones.jpeg">
+        <h3>Wireless Noise Cancelling Headphones</h3>
+        <div class="rating">★★★★☆ (1,245)</div>
+        <div class="price">
+            <span class="new">₹2,499</span>
+            <span class="old">₹3,099</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <div class="badge">30% OFF</div>
+        <img src="C:\Users\asus\Downloads\fitness watch.jpg">
+        <h3>Smart Fitness Watch</h3>
+        <div class="rating">★★★★★ (890)</div>
+        <div class="price">
+            <span class="new">₹3,999</span>
+            <span class="old">₹5,699</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <div class="badge">15% OFF</div>
+        <img src="C:\Users\asus\Downloads\speaker.jpeg">
+        <h3>Portable Bluetooth Speaker</h3>
+        <div class="rating">★★★★☆ (542)</div>
+        <div class="price">
+            <span class="new">₹1,499</span>
+            <span class="old">₹1,899</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <div class="badge">25% OFF</div>
+        <img src="C:\Users\asus\Downloads\shoes.jpeg">
+        <h3>Men's Running Shoes</h3>
+        <div class="rating">★★★★☆ (720)</div>
+        <div class="price">
+            <span class="new">₹2,199</span>
+            <span class="old">₹2,899</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+        <div class="badge">10% OFF</div>
+        <img src="C:\Users\asus\Downloads\bag.jpeg">
+        <h3>Travel Backpack</h3>
+        <div class="rating">★★★★★ (350)</div>
+        <div class="price">
+            <span class="new">₹999</span>
+            <span class="old">₹1,199</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+<div class="card">
+        <div class="badge">10% OFF</div>
+        <img src="C:\Users\asus\Downloads\badminton.jpeg">
+        <h3>Badminton</h3>
+        <div class="rating">★★★★★ (350)</div>
+        <div class="price">
+            <span class="new">₹999</span>
+            <span class="old">₹1,199</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+<div class="card">
+        <div class="badge">10% OFF</div>
+        <img src="C:\Users\asus\Downloads\shirt.jpg">
+        <h3>Shirt</h3>
+        <div class="rating">★★★★★ (350)</div>
+        <div class="price">
+            <span class="new">₹999</span>
+            <span class="old">₹1,199</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+<div class="card">
+        <div class="badge">10% OFF</div>
+        <img src="C:\Users\asus\Downloads\jeans.jpeg">
+        <h3>Jeans</h3>
+        <div class="rating">★★★★★ (350)</div>
+        <div class="price">
+            <span class="new">₹999</span>
+            <span class="old">₹1,199</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+<div class="card">
+        <div class="badge">10% OFF</div>
+        <img src="C:\Users\asus\Downloads\Bodywash.jpeg">
+        <h3>Bodywash</h3>
+        <div class="rating">★★★★★ (350)</div>
+        <div class="price">
+            <span class="new">₹999</span>
+            <span class="old">₹1,199</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+<div class="card">
+        <div class="badge">10% OFF</div>
+        <img src="C:\Users\asus\Downloads\facewash.jpeg">
+        <h3>Facewash</h3>
+        <div class="rating">★★★★★ (350)</div>
+        <div class="price">
+            <span class="new">₹999</span>
+            <span class="old">₹1,199</span>
+        </div>
+        <button class="btn">Add to Cart</button>
+    </div>
+
+
+</div>
+</div>
+
+</body>
+</html>
