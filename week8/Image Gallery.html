@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="page-title">memories so far</h1>
+      <p class="page-subtitle">adventures and solace</p>
+    </header>
+
+    <main class="gallery-area">
+      <div class="gallery" id="gallery" aria-label="Image gallery"></div>
+    </main>
+
+    <section class="gallery-note" aria-label="Gallery description">
+      <p>
+        A collection of moments meant to be explored slowly. Hover an image to preview it,
+        then click to open it fullscreen.
+      </p>
+    </section>
+
+    <!-- Fullscreen lightbox -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Close fullscreen view"
+      >
+        &times;
+      </button>
+
+      <div class="lightbox-media" role="document">
+        <img id="lightboxImage" alt="" />
+        <div class="lightbox-caption" id="lightboxCaption" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
