@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderWithMe | Travel Blog</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== ROOT COLORS ===== */
+:root{
+    --primary:#ff6a00;
+    --secondary:#ee0979;
+    --accent:#00f5d4;
+    --dark:#0f2027;
+    --dark2:#203a43;
+    --dark3:#2c5364;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,var(--dark),var(--dark2),var(--dark3));
+    color:white;
+}
+
+/* Navigation  */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.8);
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Playfair Display', serif;
+    color:var(--accent);
+    font-size:24px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:var(--accent);
+}
+
+.menu-toggle{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* ===== HERO ===== */
+header{
+    position:relative;
+    height:100vh;
+    background:url('https://source.unsplash.com/1600x900/?travel,nature') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 8%;
+}
+
+.hero-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    font-family:'Playfair Display', serif;
+}
+
+.hero-content p{
+    margin:20px 0;
+    font-size:22px;
+}
+
+.btn{
+    padding:12px 26px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    margin:5px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:var(--secondary);
+}
+
+.btn-outline{
+    border:2px solid var(--accent);
+    color:var(--accent);
+}
+
+.btn-outline:hover{
+    background:var(--accent);
+    color:black;
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:40px;
+    color:var(--accent);
+}
+
+/* ===== BLOG CARDS ===== */
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.blog-card{
+    background:rgba(255,255,255,0.08);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.blog-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.blog-card .content{
+    padding:20px;
+}
+
+/* ===== DESTINATIONS ===== */
+.cat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+}
+
+.cat-card{
+    position:relative;
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.cat-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.cat-card::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    top:0;
+}
+
+.cat-card h4{
+    position:absolute;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+.cat-card:hover{
+    transform:scale(1.05);
+}
+
+/* ===== ABOUT ===== */
+.about{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:20px;
+}
+
+.about img{
+    width:300px;
+    border-radius:15px;
+}
+
+.about-text{
+    flex:1;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter{
+    text-align:center;
+    background:rgba(0,0,0,0.4);
+    padding:50px;
+    border-radius:20px;
+}
+
+.newsletter input{
+    padding:12px;
+    width:250px;
+    border:none;
+    border-radius:30px;
+    margin-right:10px;
+}
+
+/* ===== CONTACT ===== */
+.contact form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact input, .contact textarea{
+    padding:12px;
+    border-radius:10px;
+    border:none;
+}
+
+.contact button{
+    padding:12px;
+    background:var(--primary);
+    border:none;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.contact button:hover{
+    background:var(--secondary);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.7);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    nav ul{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:black;
+        flex-direction:column;
+        width:200px;
+        display:none;
+        padding:20px;
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .about{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">WanderWithMe</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Explore The World With Me</h1>
+        <p>Travel guides, itineraries, photography & real travel experiences.</p>
+        <a href="#blog" class="btn btn-primary">Read Blog</a>
+        <a href="#destinations" class="btn btn-outline">Explore Destinations</a>
+    </div>
+</header>
+
+<!-- BLOG -->
+<section id="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <img src="C:\Users\asus\Downloads\bali.jpg">
+            <div class="content">
+                <h3>Bali Travel Guide</h3>
+                <p>Complete itinerary and hidden waterfalls.</p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="C:\Users\asus\Downloads\egypt.jpg">
+            <div class="content">
+                <h3>Egypt Pyramids Experience</h3>
+                <p>Everything you need to know before visiting.</p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="C:\Users\asus\Downloads\japan.jpg">
+            <div class="content">
+                <h3>Japan Cherry Blossom Trip</h3>
+                <p>Best time and places to see sakura.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+    <h2>Explore My Destinations</h2>
+    <div class="cat-grid">
+        <div class="cat-card"><img src="C:\Users\asus\Downloads\paris.jpeg"><h4>Paris</h4></div>
+        <div class="cat-card"><img src="C:\Users\asus\Downloads\maldives.jpg"><h4>Maldives</h4></div>
+        <div class="cat-card"><img src="C:\Users\asus\Downloads\swtizeland.jpeg"><h4>Switzerland</h4></div>
+        <div class="cat-card"><img src="C:\Users\asus\Downloads\dubai.jpeg"><h4>Dubai</h4></div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+        <img src="C:\Users\asus\Downloads\WhatsApp Image 2026-02-17 at 11.18.12 PM.jpeg">
+        <div class="about-text">
+            <h3>Welcome to my Travel Journey!!</h3>
+            <p>Travel isn’t just something I do — it’s a part of who I am. I’m passionate about exploring new places, experiencing different cultures, and discovering the stories that make each destination unique. From vibrant cities to peaceful landscapes, every journey inspires me and shapes my perspective.
+
+This space is where I share my adventures, insights, and the moments that make traveling so meaningful. Whether it’s a carefully planned trip or a spontaneous getaway, I believe every experience adds a new chapter to the story.
+
+Thank you for being part of the journey. 🌍</p>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section>
+    <div class="newsletter">
+        <h2>Join My Travel Newsletter</h2>
+        <p>Get travel tips & guides directly to your inbox.</p>
+        <input type="email" placeholder="Enter your email">
+        <button class="btn btn-primary">Subscribe</button>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 WanderWithMe | Travel Blog
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
