@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Weather Forecast</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-container">
+    <header class="hero">
+      <h1>City Weather Forecast</h1>
+      <p>Check weather conditions of major Indian cities.</p>
+    </header>
+
+    <section class="filters" aria-label="Weather filters">
+      <button class="filter-btn active" data-filter="all" type="button">All</button>
+      <button class="filter-btn" data-filter="hot" type="button">Hot</button>
+      <button class="filter-btn" data-filter="rainy" type="button">Rainy</button>
+      <button class="filter-btn" data-filter="cloudy" type="button">Cloudy</button>
+    </section>
+
+    <section class="cards-grid" id="weatherCards">
+      <article class="city-card active" data-city="Mumbai" tabindex="0">
+        <img
+          src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1000&q=80"
+          alt="Gateway of India in Mumbai"
+          class="landmark-img"
+        />
+        <div class="card-content">
+          <h2>Mumbai</h2>
+          <p class="landmark">Gateway of India</p>
+          <div class="weather-icon">SUN</div>
+          <ul class="weather-list">
+            <li><span>Temperature:</span> <strong data-field="temperature"></strong></li>
+            <li><span>Condition:</span> <strong data-field="condition"></strong></li>
+            <li><span>Humidity:</span> <strong data-field="humidity"></strong></li>
+            <li><span>Wind Speed:</span> <strong data-field="wind"></strong></li>
+            <li><span>Date / Time:</span> <strong data-field="time"></strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="city-card" data-city="Delhi" tabindex="0">
+        <img
+          src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1000&q=80"
+          alt="India Gate in Delhi"
+          class="landmark-img"
+        />
+        <div class="card-content">
+          <h2>Delhi</h2>
+          <p class="landmark">India Gate</p>
+          <div class="weather-icon">PCL</div>
+          <ul class="weather-list">
+            <li><span>Temperature:</span> <strong data-field="temperature"></strong></li>
+            <li><span>Condition:</span> <strong data-field="condition"></strong></li>
+            <li><span>Humidity:</span> <strong data-field="humidity"></strong></li>
+            <li><span>Wind Speed:</span> <strong data-field="wind"></strong></li>
+            <li><span>Date / Time:</span> <strong data-field="time"></strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="city-card" data-city="Pune" tabindex="0">
+        <img
+          src="pune-real.jpg"
+          alt="Shaniwar Wada in Pune"
+          class="landmark-img"
+        />
+        <div class="card-content">
+          <h2>Pune</h2>
+          <p class="landmark">Shaniwar Wada</p>
+          <div class="weather-icon">RAN</div>
+          <ul class="weather-list">
+            <li><span>Temperature:</span> <strong data-field="temperature"></strong></li>
+            <li><span>Condition:</span> <strong data-field="condition"></strong></li>
+            <li><span>Humidity:</span> <strong data-field="humidity"></strong></li>
+            <li><span>Wind Speed:</span> <strong data-field="wind"></strong></li>
+            <li><span>Date / Time:</span> <strong data-field="time"></strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="city-card" data-city="Bangalore" tabindex="0">
+        <img
+          src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1000&q=80"
+          alt="Vidhana Soudha in Bangalore"
+          class="landmark-img"
+        />
+        <div class="card-content">
+          <h2>Bangalore</h2>
+          <p class="landmark">Vidhana Soudha</p>
+          <div class="weather-icon">CLD</div>
+          <ul class="weather-list">
+            <li><span>Temperature:</span> <strong data-field="temperature"></strong></li>
+            <li><span>Condition:</span> <strong data-field="condition"></strong></li>
+            <li><span>Humidity:</span> <strong data-field="humidity"></strong></li>
+            <li><span>Wind Speed:</span> <strong data-field="wind"></strong></li>
+            <li><span>Date / Time:</span> <strong data-field="time"></strong></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="city-card" data-city="Kolkata" tabindex="0">
+        <img
+          src="https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1000&q=80"
+          alt="Howrah Bridge in Kolkata"
+          class="landmark-img"
+        />
+        <div class="card-content">
+          <h2>Kolkata</h2>
+          <p class="landmark">Howrah Bridge</p>
+          <div class="weather-icon">RAN</div>
+          <ul class="weather-list">
+            <li><span>Temperature:</span> <strong data-field="temperature"></strong></li>
+            <li><span>Condition:</span> <strong data-field="condition"></strong></li>
+            <li><span>Humidity:</span> <strong data-field="humidity"></strong></li>
+            <li><span>Wind Speed:</span> <strong data-field="wind"></strong></li>
+            <li><span>Date / Time:</span> <strong data-field="time"></strong></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
