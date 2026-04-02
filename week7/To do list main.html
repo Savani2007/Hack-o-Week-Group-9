@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📅 Your's To-Do </h1>
+
+<input type="date" id="datePicker">
+
+<button onclick="openTasks()">Open Tasks</button>
+
+</div>
+
+<script>
+
+function openTasks(){
+
+let date=document.getElementById("datePicker").value;
+
+if(!date){
+alert("Select a date");
+return;
+}
+
+localStorage.setItem("selectedDate",date);
+
+window.location.href="tasks.html";
+
+}
+
+</script>
+
+</body>
+</html>
