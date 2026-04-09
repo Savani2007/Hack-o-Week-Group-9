@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbiosis Institute of Technology Nagpur | Web Dev Bootcamp</title>
+    <meta
+      name="description"
+      content="Full-stack web development bootcamp at SIT Nagpur — HTML, CSS, JavaScript, React, Node.js, projects, and placement support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrap header-inner">
+        <a href="#" class="brand">
+          <span class="brand-badge">SIT</span>
+          Symbiosis Institute of Technology Nagpur
+        </a>
+        <button type="button" class="burger" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="mainNav">
+          <a href="#program">Program</a>
+          <a href="#team">Team</a>
+          <a href="#faq">FAQ</a>
+          <a href="#apply" class="btn btn-nav">Apply</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <p class="pill">Next cohort · 15 June 2026</p>
+          <h1>Web Development Bootcamp</h1>
+          <p class="lead">
+            16 weeks from zero to job-ready: real projects, mentor support, and
+            placement help — built for beginners and career switchers.
+          </p>
+          <div class="hero-actions">
+            <a href="#apply" class="btn btn-light">Book counseling</a>
+            <a href="#program" class="btn btn-ghost-light">See syllabus</a>
+          </div>
+          <ul class="stats">
+            <li><strong>1,200+</strong> graduates</li>
+            <li><strong>92%</strong> placed</li>
+            <li><strong>4.8/5</strong> rating</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="program">
+        <div class="wrap">
+          <h2>Why this bootcamp</h2>
+          <div class="grid">
+            <article class="card pop">
+              <h3>Modern stack</h3>
+              <p>Tools and workflows used in real product teams.</p>
+            </article>
+            <article class="card pop">
+              <h3>Mentors</h3>
+              <p>Live sessions, code reviews, and doubt support.</p>
+            </article>
+            <article class="card pop">
+              <h3>Career</h3>
+              <p>Resume, interviews, LinkedIn, and hiring partner referrals.</p>
+            </article>
+          </div>
+
+          <h2 class="mt">What you’ll learn</h2>
+          <ol class="modules">
+            <li><span>1–4</span> HTML, CSS, responsive layout, Git, JavaScript</li>
+            <li><span>5–8</span> ES6+, APIs, React, state, UI libraries</li>
+            <li><span>9–12</span> Node, Express, MongoDB, auth, REST APIs</li>
+            <li><span>13–16</span> Testing, deploy, capstone, interview prep</li>
+          </ol>
+          <p class="note">
+            <strong>Snapshot:</strong> 16 weeks · online + weekend live labs · 8
+            projects + 1 capstone · 12th pass or graduate
+          </p>
+        </div>
+      </section>
+
+      <section class="section tint" id="team">
+        <div class="wrap split">
+          <div>
+            <h2>Faculty</h2>
+            <ul class="list-plain">
+              <li><strong>Neha Sharma</strong> — Frontend lead, 9+ yrs</li>
+              <li><strong>Arjun Mehta</strong> — Full-stack, scaled SaaS apps</li>
+              <li><strong>Riya Thomas</strong> — Career coach, 1,500+ sessions</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Schedule</h2>
+            <p><strong>Weekdays:</strong> self-paced (8–10 hrs/week).</p>
+            <p><strong>Weekends:</strong> live labs & project workshops.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap grid-2">
+          <article class="card pop price-card" id="pricing">
+            <h2>Pricing</h2>
+            <p class="price">₹89,999 <small>+ taxes</small></p>
+            <ul>
+              <li>Scholarship up to ₹15,000 (early bird)</li>
+              <li>No-cost EMI</li>
+              <li>7-day money-back window</li>
+            </ul>
+            <a href="#apply" class="btn">Ask about aid</a>
+          </article>
+          <div>
+            <h2>Stories</h2>
+            <blockquote class="quote">
+              “Non-tech to frontend in five months — projects and mocks made the
+              difference.” <cite>— Priyanka G.</cite>
+            </blockquote>
+            <blockquote class="quote">
+              “Two offers after graduation. Mentors were always there.”
+              <cite>— Rahul K.</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tint" id="faq">
+        <div class="wrap">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>Do I need coding experience?</summary>
+              <p>No — we start from the basics.</p>
+            </details>
+            <details>
+              <summary>Placement support?</summary>
+              <p>Yes: resumes, mocks, and partner referrals.</p>
+            </details>
+            <details>
+              <summary>How many projects?</summary>
+              <p>Eight guided + one capstone.</p>
+            </details>
+            <details>
+              <summary>Certificate?</summary>
+              <p>Yes, on successful completion.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="apply">
+        <div class="wrap narrow">
+          <h2>Apply</h2>
+          <p>We’ll reach out within 24 hours.</p>
+          <form class="form" id="applyForm">
+            <div class="toolbar" role="group" aria-label="Undo and redo">
+              <button type="button" class="btn btn-mini" id="undoBtn" disabled title="Alt+Z">
+                Undo
+              </button>
+              <button type="button" class="btn btn-mini" id="redoBtn" disabled title="Alt+Y">
+                Redo
+              </button>
+            </div>
+            <input name="name" type="text" placeholder="Full name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="phone" type="tel" placeholder="Phone" required />
+            <select name="experience" required>
+              <option value="">Experience level</option>
+              <option>Beginner</option>
+              <option>Basic</option>
+              <option>Intermediate</option>
+            </select>
+            <button type="submit" class="btn btn-block">Submit</button>
+          </form>
+          <p class="msg" id="formNote" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-row">
+        <p>© 2026 Symbiosis Institute of Technology Nagpur</p>
+        <p>admissions@sitnagpur.edu.in · +91 98765 43210</p>
+      </div>
+    </footer>
+
+    <a
+      class="wa"
+      href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20enroll%20in%20the%20Web%20Development%20Bootcamp."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+      >WhatsApp</a
+    >
+
+    <script src="script.js"></script>
+  </body>
+</html>
